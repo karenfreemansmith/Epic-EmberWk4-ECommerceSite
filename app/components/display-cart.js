@@ -10,5 +10,3 @@ export default Ember.Component.extend({
     return t;
   })
 });
-
-//total: Ember.computed('item.price').forEach(function(item) {
