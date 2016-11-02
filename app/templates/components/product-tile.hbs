@@ -1,6 +1,10 @@
-{{product.title}}
-{{product.image}}
-{{product.description}}
-{{product.cost}}
-
-<button {{action 'addToCart' product}}>Add to Cart</button>
+<div class="row">
+  <div class="col-xs-9">
+    <a href="{{product.url}}" target="_blank"><h2>{{product.title}}</h2></a>
+    {{product.description}}
+  </div>
+  <div class="col-xs-3">
+  <h3>${{product.price}}</h3>
+  <button {{action 'addToCart' product}}>Add to Cart</button>
+  </div>
+</div>
