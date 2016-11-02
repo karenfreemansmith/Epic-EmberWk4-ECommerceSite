@@ -3,9 +3,12 @@
     <a href="/product/{{product.listing_id}}"><h2>{{product.title}}</h2></a>
     <div class="row">
       <div class="col-xs-4">
-        {{#each product.Images as |image|}}
-        <img src="{{image.url_570xN}}" class="mySlides img-responsive img-thumbnail">
-        {{/each}}
+        {{#slick-slider autoplay=false arrows=falses}}
+          {{#each product.Images as |image|}}
+          <div class="box"><img src="{{image.url_570xN}}" class="mySlides img-responsive img-thumbnail"></div>
+          {{/each}}
+        {{/slick-slider}}
+
       </div>
       <div class="col-xs-8">{{product.description}}</div>
     </div>
