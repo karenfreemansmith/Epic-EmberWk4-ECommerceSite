@@ -1,9 +1,17 @@
 <div class="row">
   <div class="col-xs-9">
-    <a href="{{product.url}}" target="_blank"><h2>{{product.title}}</h2></a>
-    {{product.description}}
+    <a href="/product/{{product.listing_id}}"><h2>{{product.title}}</h2></a>
+    <div class="row">
+      <div class="col-xs-4">
+        {{#each product.Images as |image|}}
+        <img src="{{image.url_570xN}}" class="mySlides img-responsive img-thumbnail">
+        {{/each}}
+      </div>
+      <div class="col-xs-8">{{product.description}}</div>
+    </div>
   </div>
   <div class="col-xs-3">
+
   <h3>${{product.price}}</h3>
   <button {{action 'addToCart' product}}>Add to Cart</button>
   </div>
